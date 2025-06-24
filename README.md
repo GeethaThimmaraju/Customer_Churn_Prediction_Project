@@ -1,75 +1,81 @@
-#  Customer Churn Prediction
+# 📊 Customer Churn Prediction
 
-This project predicts customer churn using a dataset from a telecom company. A web app was also developed using Streamlit to allow user-friendly predictions.
-
----
-
-##  Problem Statement
-
-Customer churn occurs when customers stop doing business with a company. The goal is to predict which customers are likely to churn so that retention strategies can be applied proactively.
+A machine learning project that predicts whether a customer will churn (leave the service) based on their usage patterns, payment methods, and demographics. Built using Python, scikit-learn, and Streamlit.
 
 ---
 
-##  Dataset
+## 🧠 Problem Statement
 
-- **Source**: Telco Customer Churn (Kaggle)
-- **File**: `WA_Fn-UseC_-Telco-Customer-Churn.csv`
-- **Features**: Demographics, services, and account info
-- **Target**: `Churn` (Yes/No)
+Customer churn is a critical metric for businesses. The earlier a company can predict churn, the better it can act to retain valuable customers. This project uses historical data to build a machine learning model that predicts if a customer is likely to churn.
 
 ---
 
- ## Data Preprocessing
+## 📁 Dataset
 
-- Handled missing values in `TotalCharges`
-- Converted `Churn` column to binary (Yes → 1, No → 0)
-- Encoded categorical variables using One-Hot Encoding
-- Scaled numerical features using `StandardScaler`
-
----
-
-##  Models Used
-
-- **Logistic Regression**
-- **Random Forest Classifier**
-    - With and without class balancing
+- **Source**: [Telco Customer Churn - Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn)
+- **Size**: 7,043 rows × 21 columns
+- Contains information about customer account, service usage, and churn status.
 
 ---
 
-##  Evaluation Metrics
+## 🔧 Features Used
 
-- **Accuracy Score**
-- **Classification Report**
-- **Confusion Matrix**
-- **Feature Importance Visualization (for Random Forest)**
+- Demographics: Gender, Senior Citizen, Dependents, etc.
+- Account Info: Tenure, Contract Type, Monthly Charges, Total Charges.
+- Services: Internet Service, Phone Service, Streaming, etc.
+- Target: `Churn` (Yes/No)
 
 ---
 
-##  Streamlit App
+## ⚙️ ML Pipeline
 
-A web application is built using **Streamlit** to:
+1. **Data Cleaning**: Missing values handled, categorical features encoded.
+2. **Feature Engineering**: One-hot encoding of non-numeric columns.
+3. **Scaling**: StandardScaler used for numerical features.
+4. **Model**: Random Forest Classifier.
+5. **Evaluation**: Accuracy, confusion matrix, classification report.
+
+---
+
+## 🖥️ Streamlit Web App
+
+A user-friendly web application built with Streamlit to:
 
 - Input customer details
-- Predict if the customer is likely to churn
-- Display model results interactively
+- Predict churn likelihood
+- Display results interactively
 
-To run the app locally:
+### 🔄 To Run Locally:
+
 ```bash
+git clone https://github.com/your-username/customer-churn-prediction.git
+cd customer-churn-prediction
+pip install -r requirements.txt
 streamlit run app.py
 
----
+## Requirements
 
-##  Requirements
-
-```bash
-pandas  
-numpy  
-scikit-learn  
-streamlit  
-matplotlib  
-seaborn  
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
 joblib
+streamlit
+All dependencies are listed in requirements.txt
 
+
+## Project Structure
+
+customer-churn-prediction/
+│
+├── app.py                  # Streamlit web app
+├── churn_model.pkl         # Trained model
+├── scaler.pkl              # Standard scaler used during training
+├── Telco-Customer-Churn.csv  # Dataset
+├── churn_notebook.ipynb    # Data exploration, training
+├── requirements.txt
+└── README.md
 
 
 
