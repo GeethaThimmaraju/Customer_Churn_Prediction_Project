@@ -57,10 +57,11 @@ To run the app locally:
 ```bash
 streamlit run app.py
 
+---
 
-**Requirements**
+## ** Requirements**
 
-Copy code
+```bash
 pandas
 numpy
 scikit-learn
@@ -68,3 +69,4 @@ streamlit
 matplotlib
 seaborn
 joblib
+
