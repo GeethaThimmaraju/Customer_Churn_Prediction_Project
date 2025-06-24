@@ -59,14 +59,17 @@ streamlit run app.py
 
 ---
 
-## ** Requirements**
+##  Requirements
 
 ```bash
-pandas
-numpy
-scikit-learn
-streamlit
-matplotlib
-seaborn
+pandas  
+numpy  
+scikit-learn  
+streamlit  
+matplotlib  
+seaborn  
 joblib
+
+
+
 
